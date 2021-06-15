@@ -1,0 +1,53 @@
+<!doctype html>
+	<head>
+		<style>
+			body {
+               background-image: url("bg.png");
+               background-size: cover;
+               background-repeat: no-repeat;
+                 font-family:courier;
+		}
+			input {
+			    padding: 10px;
+			    width: 300px;
+			    border-radius: 5px;
+			    border: solid 2px #BBB;
+			}
+			div {
+			    margin:10px 0px;
+			}
+			button {
+			    padding:10px;
+			    background-color:#0f08ee;
+			    color: #FFFFFF;
+			    border: 0px;
+			    cursor:pointer;
+			    border-radius: 5px;
+			}
+		</style>
+		<title>Text to Audio</title>
+	</head>
+	<body>
+	    <h2>Text to Speech</h2>
+		<div><input type="text" id="text-to-speech" placeholder="Enter text here..."/></div>
+        <div><button type="button" onclick="textToAudio()">Speak</button></div>
+        <br/>
+        <div><small><b>NOTE:</b> Use speak button to convert text to speech.</small></div>
+		<script>
+			/* JS comes here */
+            function textToAudio() {
+                let msg = document.getElementById("text-to-speech").value;
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
+            }
+		</script>
+	</body>
+</html>
