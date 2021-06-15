@@ -8,3 +8,5 @@ Properties used: <br>
 2.SpeechSynthesisUtterance <br>
 
 3.window.speechSynthesis <br>
+
+Link- https://divyashukla23.github.io/Text-to-audio/index.html
