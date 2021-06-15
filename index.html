@@ -8,27 +8,37 @@
                  font-family:courier;
 		}
 			input {
-			    padding: 10px;
-			    width: 300px;
-			    border-radius: 5px;
-			    border: solid 2px #BBB;
+			    padding: 15px;
+			    width: 500px;
+			    border-radius: 10px;
+			    border: solid 2px rgb(187, 187, 187);
 			}
 			div {
-			    margin:10px 0px;
+			    margin:20px 0px;
 			}
 			button {
-			    padding:10px;
+			    padding:15px;
 			    background-color:#0f08ee;
 			    color: #FFFFFF;
 			    border: 0px;
 			    cursor:pointer;
 			    border-radius: 5px;
 			}
+		
+	.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(7, 7, 7);
+  text-align: start;
+}
+
 		</style>
 		<title>Text to Audio</title>
 	</head>
 	<body>
-	    <h2>Text to Speech</h2>
+	    <h2>Text to Speech 🎙️</h2>
 		<div><input type="text" id="text-to-speech" placeholder="Enter text here..."/></div>
         <div><button type="button" onclick="textToAudio()">Speak</button></div>
         <br/>
@@ -49,8 +59,10 @@
                 window.speechSynthesis.speak(speech);
             }
 		</script>
-        <footer>
-            <p>Made with ❤️ by Divya Shukla</p>
-          </footer>
+		<div class="footer">
+			<p>Made with ❤️ by Divya Shukla</p>
+		  </div>
+        
+         
 	</body>
 </html>
